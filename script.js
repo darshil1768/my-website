@@ -3,7 +3,7 @@ const magicBtn = document.getElementById('magicBtn');
 const magicMsg = document.getElementById('magicMsg');
 
 magicBtn.addEventListener('click', () => {
-    magicMsg.textContent = "✨ Ta-da! You clicked the magic button!";
+    magicMsg.textContent = "✨ Letss Gooo! You clicked the magic button!";
     magicMsg.style.color = '#ffdd57';
 });
 
@@ -18,7 +18,8 @@ greetBtn.addEventListener('click', () => {
         greetMsg.textContent = `Hello, ${name}! Welcome to my website 😊`;
         greetMsg.style.color = '#4f46e5';
     } else {
-        greetMsg.textContent = "Please enter your name!";
+        greetMsg.textContent = "Please enter your beautiful name!";
         greetMsg.style.color = '#e53e3e';
     }
 });
+
