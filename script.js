@@ -15,7 +15,7 @@ greetBtn.addEventListener('click', () => {
   const name = userName.value.trim();
   if(name){
     greetMsg.textContent = `Hello, ${name}! Welcome to my website 😊`;
-    greetMsg.style.color = '#6366f1';
+    greetMsg.style.color = '#4f46e5';
   } else {
     greetMsg.textContent = "Please enter your name!";
     greetMsg.style.color = '#e53e3e';
@@ -27,6 +27,6 @@ window.addEventListener('load', () => {
   const skillFills = document.querySelectorAll('.skill-fill');
   skillFills.forEach(fill => {
     const width = fill.getAttribute('data-skill');
-    fill.style.width = width; // animates using CSS transition
+    fill.style.width = width;
   });
 });
