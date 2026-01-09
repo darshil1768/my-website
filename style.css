@@ -153,4 +153,28 @@ footer {
 .login button {
   margin-top: 10px;
 }
+.login {
+  background-color: #ffffff;
+  padding: 60px 10%;
+  text-align: center;
+  margin: 50px auto;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+
+.login input {
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+.login button {
+  margin-top: 10px;
+}
+
+
 
