@@ -1,85 +1,24 @@
-console.log("Website loaded successfully!");
-/* BASIC RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// Button Magic Message
+const magicBtn = document.getElementById('magicBtn');
+const magicMsg = document.getElementById('magicMsg');
 
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
-    line-height: 1.6;
-}
+magicBtn.addEventListener('click', () => {
+    magicMsg.textContent = "✨ Ta-da! You clicked the magic button!";
+    magicMsg.style.color = '#ffdd57';
+});
 
-/* HEADER */
-header {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-}
+// Greeting Message
+const greetBtn = document.getElementById('greetBtn');
+const userName = document.getElementById('userName');
+const greetMsg = document.getElementById('greetMsg');
 
-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    margin-bottom: 20px;
-}
-
-.btn {
-    background-color: white;
-    color: #764ba2;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: #e0d7ff;
-    transform: translateY(-2px);
-}
-
-/* MAGIC MESSAGE */
-.magic-msg {
-    margin-top: 15px;
-    font-weight: bold;
-    color: #ffe066;
-}
-
-/* SECTIONS */
-section {
-    padding: 60px 10%;
-    text-align: center;
-    background-color: #fff;
-    margin: 20px auto;
-    border-radius: 15px;
-    max-width: 1000px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-section h2 {
-    margin-bottom: 20px;
-    color: #4f46e5;
-}
-
-.skill-box {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.skill-box span {
-    background-color: #667eea;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-}
-
+greetBtn.addEventListener('click', () => {
+    const name = userName.value.trim();
+    if(name) {
+        greetMsg.textContent = `Hello, ${name}! Welcome to my website 😊`;
+        greetMsg.style.color = '#4f46e5';
+    } else {
+        greetMsg.textContent = "Please enter your name!";
+        greetMsg.style.color = '#e53e3e';
+    }
+});
