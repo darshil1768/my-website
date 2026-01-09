@@ -3,7 +3,7 @@ const magicBtn = document.getElementById('magicBtn');
 const magicMsg = document.getElementById('magicMsg');
 
 magicBtn.addEventListener('click', () => {
-  magicMsg.textContent = "✨ Ta-da! You clicked the magic button!";
+  magicMsg.textContent = "✨ Letss Gooo! You clicked the magic button!";
 });
 
 // GREETING BUTTON
@@ -14,7 +14,7 @@ const greetMsg = document.getElementById('greetMsg');
 greetBtn.addEventListener('click', () => {
   const name = userName.value.trim();
   if(name){
-    greetMsg.textContent = `Hello, ${name}! Welcome to my website 😊`;
+    greetMsg.textContent = `Hello, ${name}! Welcome to my Portfolio 😊`;
     greetMsg.style.color = '#4f46e5';
   } else {
     greetMsg.textContent = "Please enter your name!";
@@ -30,3 +30,4 @@ window.addEventListener('load', () => {
     fill.style.width = width;
   });
 });
+
