@@ -2,15 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* BODY BACKGROUND — CHANGED HERE */
 body {
-    background: linear-gradient(120deg, #f5f3ff, #e0e7ff);
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f3ff, #e0e7ff);
     color: #333;
 }
 
-/* Header */
+/* HEADER */
 header {
     height: 100vh;
     background: linear-gradient(135deg, #667eea, #764ba2);
@@ -41,7 +43,7 @@ header p {
     font-weight: bold;
 }
 
-/* Sections */
+/* SECTIONS */
 section {
     padding: 60px 10%;
     text-align: center;
@@ -59,7 +61,7 @@ section h2 {
     line-height: 1.6;
 }
 
-/* Skills */
+/* SKILLS */
 .skill-box {
     display: flex;
     justify-content: center;
@@ -74,17 +76,15 @@ section h2 {
     border-radius: 20px;
 }
 
-/* Contact */
+/* CONTACT */
 .contact {
-    background: #eef1f7;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-    background: #33ed0e;
+    background: #222;
     color: #ccc;
     text-align: center;
     padding: 15px;
 }
-
-
