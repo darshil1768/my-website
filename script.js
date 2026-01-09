@@ -1,5 +1,8 @@
+// LOGIN FUNCTIONALITY
 const loginBtn = document.getElementById('loginBtn');
 const loginMsg = document.getElementById('loginMsg');
+const loginSection = document.getElementById('loginSection');
+const mainContent = document.getElementById('mainContent');
 
 loginBtn.addEventListener('click', () => {
     const name = document.getElementById('loginName').value.trim();
@@ -8,28 +11,17 @@ loginBtn.addEventListener('click', () => {
 
     if (!name || !age || !dob) {
         loginMsg.textContent = "Please fill all fields!";
-        loginMsg.style.color = "#e53e3e"; // red for error
-        return;
-    }
-
-    if (parseInt(age) < 13) {
-        loginMsg.textContent = "You must be at least 13 years old!";
         loginMsg.style.color = "#e53e3e";
         return;
     }
 
-    // Success message
-    loginMsg.textContent = `Welcome, ${name}!`;
-    loginMsg.style.color = "#ffffff";
+    if (parseInt(age) < 13) {
+        loginMsg.textContent = "You must be at least 13 years old.";
+        loginMsg.style.color = "#e53e3e";
+        return;
+    }
 
-    // Optional: clear inputs
-    document.getElementById('loginName').value = "";
-    document.getElementById('loginAge').value = "";
-    document.getElementById('loginDob').value = "";
-});
-
-
-    // Hide login section and show main content
+    // Success: Hide login and show main content
     loginSection.style.display = 'none';
     mainContent.style.display = 'block';
 
@@ -41,12 +33,12 @@ loginBtn.addEventListener('click', () => {
     });
 });
 
-// MAGIC BUTTON
+// MAGIC MESSAGE BUTTON
 const magicBtn = document.getElementById('magicBtn');
 const magicMsg = document.getElementById('magicMsg');
 
 magicBtn.addEventListener('click', () => {
-  magicMsg.textContent = "✨ Letss Gooo...! You clicked the magic button!";
+  magicMsg.textContent = "✨ Letsss Goo...! You clicked the magic button!";
 });
 
 // GREETING BUTTON
@@ -57,12 +49,10 @@ const greetMsg = document.getElementById('greetMsg');
 greetBtn.addEventListener('click', () => {
   const name = userName.value.trim();
   if(name){
-    greetMsg.textContent = `Hello, ${name}! Welcome to my Portfolio 😊`;
+    greetMsg.textContent = `Hello, ${name}! Welcome to my website 😊`;
     greetMsg.style.color = '#4f46e5';
   } else {
     greetMsg.textContent = "Please enter your Beautiful name!";
     greetMsg.style.color = '#e53e3e';
   }
 });
-
-
