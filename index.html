@@ -8,25 +8,23 @@
 </head>
 <body>
 
-<!-- LOGIN SECTION -->
-<section class="login">
+<!-- LOGIN PAGE -->
+<section class="login" id="loginSection">
   <div class="login-container">
     <h1>Welcome</h1>
-    <p>Enter your details to continue</p>
-
+    <p>Enter your details to access the portfolio</p>
     <input type="text" id="loginName" placeholder="Name">
     <input type="number" id="loginAge" placeholder="Age">
     <input type="date" id="loginDob" placeholder="Date of Birth">
-    
     <button id="loginBtn" class="btn">Login</button>
     <p id="loginMsg" class="magic-msg"></p>
   </div>
 </section>
 
-<!-- WEBSITE CONTENT -->
-<div id="mainContent" style="display:none;"> <!-- Hidden until login -->
+<!-- MAIN CONTENT HIDDEN UNTIL LOGIN -->
+<div id="mainContent" style="display:none;">
 
-  <!-- HEADER / HERO -->
+  <!-- HERO / HEADER -->
   <header>
     <h1>Welcome to My Portfolio</h1>
     <p>Click the button below to see a magic message!</p>
@@ -37,7 +35,7 @@
   <!-- ABOUT SECTION -->
   <section class="about">
     <h2>About Me</h2>
-    <p>Hello! I’m a web developer learning JavaScript, HTML, and CSS. I love building interactive websites!</p>
+    <p>I am a web developer creating interactive websites with professional designs.</p>
   </section>
 
   <!-- SKILLS SECTION -->
@@ -50,33 +48,32 @@
       </div>
       <div class="skill">
         <span>CSS</span>
-        <div class="skill-bar"><div class="skill-fill" data-skill="80%"></div></div>
+        <div class="skill-bar"><div class="skill-fill" data-skill="85%"></div></div>
       </div>
       <div class="skill">
         <span>JavaScript</span>
-        <div class="skill-bar"><div class="skill-fill" data-skill="70%"></div></div>
+        <div class="skill-bar"><div class="skill-fill" data-skill="75%"></div></div>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS / IMAGES -->
   <section class="projects">
-    <h2>My Coding Projects</h2>
+    <h2>My Projects</h2>
     <div class="project-images">
-      <img src="code1.png" alt="Code Project 1">
-      <img src="code2.png" alt="Code Project 2">
+      <img src="code1.png" alt="Project 1">
+      <img src="code2.png" alt="Project 2">
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact">
     <h2>Contact</h2>
-    <input type="text" id="userName" placeholder="Enter your name">
+    <input type="text" id="userName" placeholder="Enter your Beautiful name">
     <button id="greetBtn" class="btn">Greet Me</button>
     <p id="greetMsg" class="magic-msg"></p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2026 Professional Portfolio. All rights reserved.</p>
   </footer>
@@ -86,5 +83,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
