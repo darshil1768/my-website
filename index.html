@@ -1,55 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<section class="projects">
-    <h2>My Coding Projects</h2>
-    <div class="project-images">
-        <img src="code1.png" alt="Code Project 1">
-        <img src="code2.png" alt="Code Project 2">
-    </div>
-</section>
 <body>
+
+<!-- HEADER / HERO -->
 <header>
-    <h1>Welcome to My Website</h1>
-    <p>Click the button below to see a magic message!</p>
-    <button id="magicBtn" class="btn">Show Message</button>
-    <p id="magicMsg" class="magic-msg"></p>
+  <h1>Welcome to My Portfolio</h1>
+  <p>Click the button below to see a magic message!</p>
+  <button id="magicBtn" class="btn">Show Message</button>
+  <p id="magicMsg" class="magic-msg"></p>
 </header>
 
+<!-- ABOUT SECTION -->
 <section class="about">
-    <h2>About Me</h2>
-    <p>Hello! I am learning web development and JavaScript. This website has interactive elements!</p>
+  <h2>About Me</h2>
+  <p>Hello! I’m a web developer learning JavaScript, HTML, and CSS. I love building interactive websites!</p>
 </section>
 
+<!-- SKILLS SECTION -->
 <section class="skills">
-    <h2>Skills</h2>
-    <div class="skill-box">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
+  <h2>My Skills</h2>
+  <div class="skill-box">
+    <div class="skill">
+      <span>HTML</span>
+      <div class="skill-bar"><div class="skill-fill" data-skill="90%"></div></div>
     </div>
+    <div class="skill">
+      <span>CSS</span>
+      <div class="skill-bar"><div class="skill-fill" data-skill="80%"></div></div>
+    </div>
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="skill-bar"><div class="skill-fill" data-skill="70%"></div></div>
+    </div>
+  </div>
 </section>
 
+<!-- PROJECTS / IMAGES SECTION -->
+<section class="projects">
+  <h2>My Coding Projects</h2>
+  <div class="project-images">
+    <img src="code1.png" alt="Code Project 1">
+    <img src="code2.png" alt="Code Project 2">
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
 <section class="contact">
-    <h2>Contact</h2>
-    <input type="text" id="userName" placeholder="Enter your name">
-    <button id="greetBtn" class="btn">Greet Me</button>
-    <p id="greetMsg" class="magic-msg"></p>
+  <h2>Contact</h2>
+  <input type="text" id="userName" placeholder="Enter your name">
+  <button id="greetBtn" class="btn">Greet Me</button>
+  <p id="greetMsg" class="magic-msg"></p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Interactive Website. All rights reserved.</p>
+  <p>© 2026 Professional Portfolio. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
