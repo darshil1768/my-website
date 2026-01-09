@@ -1,180 +1,83 @@
-/* RESET */
+/* BASIC RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* COLOR SYSTEM */
-:root {
-    --bg-main: #0b1120;
-    --bg-card: #111827;
-    --primary: #6366f1;
-    --primary-soft: #818cf8;
-    --text-main: #e5e7eb;
-    --text-muted: #9ca3af;
-    --border-light: #1f2937;
-}
-
-/* BASE */
 body {
-    min-height: 100vh;
-    background: radial-gradient(circle at top, #111827, #0b1120);
-    color: var(--text-main);
-    font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* FADE IN ANIMATION */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* HEADER / HERO */
+/* HEADER */
 header {
-    min-height: 90vh;
-    background: linear-gradient(135deg, #4f46e5, #4338ca);
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    padding: 0 20px;
-    animation: fadeUp 1s ease-out;
+    padding: 60 px 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
 }
 
 header h1 {
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin-bottom: 12px;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.15rem;
-    max-width: 600px;
-    opacity: 0.9;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .btn {
-    display: inline-block;
-    background-color: #ffffff;
-    color: var(--primary);
-    padding: 14px 32px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    color: #764ba2;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    background-color: #e0d7ff;
+    transform: translateY(-2px);
+}
+
+/* MAGIC MESSAGE */
+.magic-msg {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffe066;
 }
 
 /* SECTIONS */
 section {
-    padding: 90px 8%;
-    animation: fadeUp 1s ease-out;
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 1000px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* CARD LAYOUT */
-.about,
-.skills,
-.contact {
-    background-color: var(--bg-card);
-    border-radius: 18px;
-    padding: 55px;
-    max-width: 1100px;
-    margin: 0 auto 70px auto;
-    border: 1px solid var(--border-light);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s ease;
-}
-
-.about:hover,
-.skills:hover,
-.contact:hover {
-    transform: translateY(-6px);
-}
-
-/* HEADINGS */
 section h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 20px;
+    color: #4f46e5;
 }
 
-/* ABOUT */
-.about p {
-    max-width: 720px;
-    margin: auto;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 1.05rem;
-}
-
-/* SKILLS */
 .skill-box {
     display: flex;
     justify-content: center;
-    gap: 18px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 .skill-box span {
-    padding: 12px 24px;
-    background-color: #1e1b4b;
-    color: var(--primary-soft);
-    font-weight: 500;
-    border-radius: 999px;
-    border: 1px solid #312e81;
-    transition: transform 0.3s ease;
-}
-
-.skill-box span:hover {
-    transform: scale(1.08);
-}
-
-/* CONTACT */
-.contact p {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 1rem;
-}
-
-/* FOOTER */
-footer {
-    background-color: #020617;
-    color: #9ca3af;
-    text-align: center;
-    padding: 26px;
-    font-size: 0.9rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.4rem;
-    }
-
-    section {
-        padding: 70px 6%;
-    }
-
-    .about,
-    .skills,
-    .contact {
-        padding: 38px 26px;
-    }
+    background-color: #667eea;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
 }
