@@ -1,8 +1,5 @@
-// LOGIN FUNCTIONALITY
 const loginBtn = document.getElementById('loginBtn');
 const loginMsg = document.getElementById('loginMsg');
-const loginSection = document.getElementById('loginSection');
-const mainContent = document.getElementById('mainContent');
 
 loginBtn.addEventListener('click', () => {
     const name = document.getElementById('loginName').value.trim();
@@ -11,20 +8,26 @@ loginBtn.addEventListener('click', () => {
 
     if (!name || !age || !dob) {
         loginMsg.textContent = "Please fill all fields!";
-        loginMsg.style.color = "#e53e3e"; // red error
+        loginMsg.style.color = "#e53e3e"; // red for error
         return;
     }
 
-    // Optional: Validate age >= 13
     if (parseInt(age) < 13) {
-        loginMsg.textContent = "You must be at least 13 years old to enter.";
+        loginMsg.textContent = "You must be at least 13 years old!";
         loginMsg.style.color = "#e53e3e";
         return;
     }
 
-    // Successful login
+    // Success message
     loginMsg.textContent = `Welcome, ${name}!`;
-    loginMsg.style.color = "#4f46e5";
+    loginMsg.style.color = "#ffffff";
+
+    // Optional: clear inputs
+    document.getElementById('loginName').value = "";
+    document.getElementById('loginAge').value = "";
+    document.getElementById('loginDob').value = "";
+});
+
 
     // Hide login section and show main content
     loginSection.style.display = 'none';
@@ -61,4 +64,5 @@ greetBtn.addEventListener('click', () => {
     greetMsg.style.color = '#e53e3e';
   }
 });
+
 
