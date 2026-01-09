@@ -7,34 +7,81 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f9fafb; /* Bright background */
-  color: #1f2937; /* Dark text for contrast */
-  line-height: 1.6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
 }
 
-/* BUTTONS */
-.btn {
-  background-color: #4f46e5; /* Primary bright button */
-  color: #ffffff;
-  padding: 12px 25px;
+/* LOGIN FORM */
+.login-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 50px 40px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  animation: fadeIn 1s ease forwards;
+}
+
+.login-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.login-container p {
+  color: #e0e0e0;
+  margin-bottom: 25px;
+}
+
+.login-container input {
+  width: 80%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 10px;
   border: none;
-  border-radius: 25px;
-  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+}
+
+.login-container input:focus {
+  border: 2px solid #ffffff;
+  background-color: rgba(255,255,255,0.25);
+}
+
+.login-container .btn {
+  width: 85%;
+  margin-top: 15px;
+  background-color: #ffffff;
+  color: #4f46e5;
   font-weight: bold;
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.btn:hover {
-  background-color: #6366f1;
+.login-container .btn:hover {
+  background-color: #e0e0ff;
   transform: translateY(-2px);
 }
 
-/* MAGIC MESSAGE */
 .magic-msg {
   margin-top: 15px;
   font-weight: bold;
-  color: #f59e0b; /* Bright accent color */
+  color: #ffe066;
 }
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
 
 /* SECTIONS */
 section {
@@ -175,6 +222,7 @@ footer {
 .login button {
   margin-top: 10px;
 }
+
 
 
 
