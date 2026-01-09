@@ -30,4 +30,29 @@ window.addEventListener('load', () => {
     fill.style.width = width;
   });
 });
+// LOGIN FUNCTIONALITY
+const loginBtn = document.getElementById('loginBtn');
+const loginMsg = document.getElementById('loginMsg');
+
+loginBtn.addEventListener('click', () => {
+    const name = document.getElementById('loginName').value.trim();
+    const age = document.getElementById('loginAge').value.trim();
+    const dob = document.getElementById('loginDob').value;
+
+    if (!name || !age || !dob) {
+        loginMsg.textContent = "Please fill all fields!";
+        loginMsg.style.color = "#e53e3e"; // red error
+        return;
+    }
+
+    // Create welcome message
+    loginMsg.textContent = `Welcome, ${name}! You are ${age} years old and your DOB is ${dob}. 🎉`;
+    loginMsg.style.color = "#4f46e5"; // bright accent color
+
+    // Clear input fields
+    document.getElementById('loginName').value = "";
+    document.getElementById('loginAge').value = "";
+    document.getElementById('loginDob').value = "";
+});
+
 
