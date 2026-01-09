@@ -1,31 +1,47 @@
-/* RESET & BASE */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* COLOR SYSTEM */
 :root {
-    --bg-main: #f7f8fc;
-    --bg-card: #ffffff;
-    --primary: #4f46e5;
-    --text-main: #1f2937;
-    --text-muted: #6b7280;
-    --border-light: #e5e7eb;
+    --bg-main: #0b1120;
+    --bg-card: #111827;
+    --primary: #6366f1;
+    --primary-soft: #818cf8;
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+    --border-light: #1f2937;
 }
 
+/* BASE */
 body {
     min-height: 100vh;
-    background-color: var(--bg-main);
+    background: radial-gradient(circle at top, #111827, #0b1120);
     color: var(--text-main);
     font-family: "Inter", "Segoe UI", system-ui, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* FADE IN ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* HEADER / HERO */
 header {
     min-height: 90vh;
-    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -33,6 +49,7 @@ header {
     align-items: center;
     text-align: center;
     padding: 0 20px;
+    animation: fadeUp 1s ease-out;
 }
 
 header h1 {
@@ -56,37 +73,46 @@ header p {
     border-radius: 999px;
     text-decoration: none;
     font-weight: 600;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* SECTIONS */
 section {
-    padding: 80px 8%;
+    padding: 90px 8%;
+    animation: fadeUp 1s ease-out;
 }
 
+/* CARD LAYOUT */
+.about,
+.skills,
+.contact {
+    background-color: var(--bg-card);
+    border-radius: 18px;
+    padding: 55px;
+    max-width: 1100px;
+    margin: 0 auto 70px auto;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+}
+
+.about:hover,
+.skills:hover,
+.contact:hover {
+    transform: translateY(-6px);
+}
+
+/* HEADINGS */
 section h2 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 30px;
     text-align: center;
-}
-
-/* CARD STYLE */
-.about,
-.skills,
-.contact {
-    background-color: var(--bg-card);
-    border-radius: 16px;
-    padding: 50px;
-    max-width: 1100px;
-    margin: 0 auto 60px auto;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-    border: 1px solid var(--border-light);
 }
 
 /* ABOUT */
@@ -102,17 +128,22 @@ section h2 {
 .skill-box {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 18px;
     flex-wrap: wrap;
 }
 
 .skill-box span {
-    padding: 12px 22px;
-    background-color: #eef2ff;
-    color: var(--primary);
+    padding: 12px 24px;
+    background-color: #1e1b4b;
+    color: var(--primary-soft);
     font-weight: 500;
     border-radius: 999px;
-    border: 1px solid #e0e7ff;
+    border: 1px solid #312e81;
+    transition: transform 0.3s ease;
+}
+
+.skill-box span:hover {
+    transform: scale(1.08);
 }
 
 /* CONTACT */
@@ -124,10 +155,10 @@ section h2 {
 
 /* FOOTER */
 footer {
-    background-color: #0f172a;
+    background-color: #020617;
     color: #9ca3af;
     text-align: center;
-    padding: 24px;
+    padding: 26px;
     font-size: 0.9rem;
 }
 
@@ -138,12 +169,12 @@ footer {
     }
 
     section {
-        padding: 60px 6%;
+        padding: 70px 6%;
     }
 
     .about,
     .skills,
     .contact {
-        padding: 35px 25px;
+        padding: 38px 26px;
     }
 }
