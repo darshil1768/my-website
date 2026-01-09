@@ -1,3 +1,4 @@
+console.log("Website loaded successfully!");
 /* BASIC RESET */
 * {
     margin: 0;
@@ -81,3 +82,4 @@ section h2 {
     padding: 10px 20px;
     border-radius: 25px;
 }
+
