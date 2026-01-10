@@ -1,40 +1,22 @@
-// ELEMENTS
+// SECTIONS
 const loginSection = document.getElementById("loginSection");
 const quizSection = document.getElementById("quizSection");
 const homeSection = document.getElementById("homeSection");
 
-const loginBtn = document.getElementById("loginBtn");
-const loginMsg = document.getElementById("loginMsg");
-
-const options = document.querySelectorAll(".option");
-const questionEl = document.getElementById("question");
-const nextBtn = document.getElementById("nextBtn");
-const progress = document.getElementById("progress");
-// ENTER KEY NAVIGATION – LOGIN FORM
-loginName.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    loginAge.focus();
+// ADMIN LOGIN
+adminLoginBtn.onclick = () => {
+  if (adminUser.value === "darshil1768" && adminPass.value === "Angel") {
+    loginSection.style.display = "none";
+    quizSection.style.display = "flex";
+    loadQuestion();
+  } else {
+    adminMsg.textContent = "Invalid Admin Credentials";
+    adminMsg.style.color = "red";
   }
-});
+};
 
-loginAge.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    loginDob.focus();
-  }
-});
-
-loginDob.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    loginBtn.click();
-  }
-});
-
-
-// LOGIN
-loginBtn.onclick = () => {
+// USER LOGIN
+userLoginBtn.onclick = () => {
   if (!loginName.value || !loginAge.value || !loginDob.value) {
     loginMsg.textContent = "Fill all fields!";
     loginMsg.style.color = "red";
@@ -45,18 +27,23 @@ loginBtn.onclick = () => {
   loadQuestion();
 };
 
+// ENTER KEY NAVIGATION (USER LOGIN)
+loginName.addEventListener("keydown", e => e.key === "Enter" && loginAge.focus());
+loginAge.addEventListener("keydown", e => e.key === "Enter" && loginDob.focus());
+loginDob.addEventListener("keydown", e => e.key === "Enter" && userLoginBtn.click());
+
 // QUIZ DATA
 const quiz = [
-  ["HTML stands for?", ["HyperText Markup Language","HighText ML","Hyper Tool"], 0],
-  ["CSS used for?", ["Logic","Styling","Database"], 1],
-  ["JS runs in?", ["Server","Browser","Compiler"], 1],
-  ["AI means?", ["Auto Info","Artificial Intelligence","Advanced IT"], 1],
-  ["Frontend library?", ["React","Node","Mongo"], 0],
-  ["GitHub used for?", ["Games","Code","Mail"], 1],
-  ["Backend?", ["HTML","CSS","Node"], 2],
-  ["API full form?", ["App Interface","Application Programming Interface","Advanced"], 1],
-  ["SQL for?", ["Design","DB","Style"], 1],
-  ["Not language?", ["Python","HTML","HTTP"], 2]
+  ["HTML stands for?", ["HyperText Markup Language","HighText ML","Hyper Tool","None"], 0],
+  ["CSS used for?", ["Logic","Styling","DB","API"], 1],
+  ["JS runs in?", ["Server","Browser","Compiler","OS"], 1],
+  ["AI means?", ["Auto","Artificial Intelligence","Advanced","None"], 1],
+  ["Frontend library?", ["React","Node","Mongo","PHP"], 0],
+  ["GitHub used for?", ["Mail","Code","Games","Chat"], 1],
+  ["Backend?", ["HTML","CSS","Node","Design"], 2],
+  ["API full form?", ["App Interface","Application Programming Interface","Advanced","None"], 1],
+  ["SQL used for?", ["Styling","Database","Logic","API"], 1],
+  ["Not language?", ["Python","HTML","HTTP","Java"], 2]
 ];
 
 let index = 0;
@@ -64,10 +51,10 @@ let score = 0;
 
 function loadQuestion() {
   nextBtn.style.display = "none";
-  questionEl.textContent = quiz[index][0];
-  progress.textContent = `Question ${index+1}/10`;
+  question.textContent = quiz[index][0];
+  progress.textContent = `Question ${index + 1}/10`;
 
-  options.forEach((btn, i) => {
+  document.querySelectorAll(".option").forEach((btn, i) => {
     btn.textContent = quiz[index][1][i];
     btn.onclick = () => {
       if (i === quiz[index][2]) score++;
@@ -87,21 +74,16 @@ nextBtn.onclick = () => {
 
 // MAGIC BUTTON
 magicBtn.onclick = () => {
-  magicMsg.textContent = "✨ Magic Happens Here!";
+  magicMsg.textContent = "✨ Magic Activated!  I know your Name and You attempted the Quiz Very well. ";
 };
 
 // GREETING
 greetBtn.onclick = () => {
   if (greetInput.value)
-    greetMsg.textContent = `Hello, ${greetInput.value}! 👋`;
+    greetMsg.textContent = `Hello, ${greetInput.value}! 👋...`;
 };
+
 // ENTER KEY – GREETING
-greetInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    greetBtn.click();
-  }
+greetInput.addEventListener("keydown", e => {
+  if (e.key === "Enter") greetBtn.click();
 });
-
-
-
