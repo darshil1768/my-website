@@ -1,40 +1,39 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  height: 100vh;
+  margin: 0;
+  min-height: 100vh;
   background: linear-gradient(135deg, #e0e7ff, #f8fafc);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* LOGIN */
-.login-container {
-  background: white;
-  padding: 40px;
-  border-radius: 18px;
-  width: 360px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.login-container h1 {
-  margin-bottom: 10px;
+.card {
+  background: white;
+  padding: 40px;
+  width: 400px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  animation: fadeUp 0.8s ease;
 }
 
 .login-subtext {
   color: black;
   font-weight: 700;
-  margin-bottom: 20px;
-  animation: fadeUp 1s ease forwards;
 }
 
-.login-container input {
+input {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
@@ -42,59 +41,40 @@ body {
   border: 1px solid #ccc;
 }
 
-.login-container button {
+button {
   width: 100%;
   padding: 12px;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: none;
   background: #4f46e5;
   color: white;
-  border: none;
-  border-radius: 12px;
   cursor: pointer;
+}
+
+.option {
+  background: white;
+  color: #4f46e5;
+  border: 1px solid #4f46e5;
+}
+
+.option:hover {
+  background: #4f46e5;
+  color: white;
+}
+
+.projects {
+  display: flex;
+  gap: 10px;
   margin-top: 10px;
 }
 
-/* QUIZ */
-.quiz-container {
-  background: white;
-  padding: 40px;
-  border-radius: 18px;
-  width: 500px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-#question {
-  margin-bottom: 20px;
-}
-
-.option-btn {
-  display: block;
+.projects img {
   width: 100%;
-  margin: 10px 0;
-  padding: 12px;
   border-radius: 10px;
-  border: 1px solid #4f46e5;
-  background: white;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.option-btn:hover {
-  background: #4f46e5;
-  color: white;
-}
-
-#nextBtn {
-  margin-top: 15px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: none;
-  background: #16a34a;
-  color: white;
-  cursor: pointer;
 }
 
 @keyframes fadeUp {
-  from {opacity:0; transform:translateY(10px);}
-  to {opacity:1; transform:translateY(0);}
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
