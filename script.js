@@ -2,20 +2,21 @@
 const loginSection = document.getElementById("loginSection");
 const quizSection = document.getElementById("quizSection");
 const homeSection = document.getElementById("homeSection");
+const adminBadge = document.getElementById("adminBadge");
 
-// ADMIN LOGIN
+// ADMIN LOGIN (SKIPS QUIZ)
 adminLoginBtn.onclick = () => {
   if (adminUser.value === "darshil1768" && adminPass.value === "Angel") {
     loginSection.style.display = "none";
-    quizSection.style.display = "flex";
-    loadQuestion();
+    homeSection.style.display = "flex";
+    adminBadge.style.display = "block";
   } else {
     adminMsg.textContent = "Invalid Admin Credentials";
     adminMsg.style.color = "red";
   }
 };
 
-// USER LOGIN
+// USER LOGIN (GOES TO QUIZ)
 userLoginBtn.onclick = () => {
   if (!loginName.value || !loginAge.value || !loginDob.value) {
     loginMsg.textContent = "Fill all fields!";
@@ -74,16 +75,27 @@ nextBtn.onclick = () => {
 
 // MAGIC BUTTON
 magicBtn.onclick = () => {
-  magicMsg.textContent = "✨ Magic Activated!  I know your Name and You attempted the Quiz Very well. ";
+  magicMsg.textContent = "✨ Magic Activated!";
 };
 
 // GREETING
 greetBtn.onclick = () => {
   if (greetInput.value)
-    greetMsg.textContent = `Hello, ${greetInput.value}! 👋...`;
+    greetMsg.textContent = `Hello, ${greetInput.value}! 👋`;
 };
 
 // ENTER KEY – GREETING
 greetInput.addEventListener("keydown", e => {
   if (e.key === "Enter") greetBtn.click();
 });
+
+// LOGOUT
+logoutBtn.onclick = () => {
+  homeSection.style.display = "none";
+  quizSection.style.display = "none";
+  loginSection.style.display = "flex";
+  adminBadge.style.display = "none";
+
+  // Reset fields
+  document.querySelectorAll("input").forEach(i => i.value = "");
+};
