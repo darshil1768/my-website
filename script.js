@@ -95,4 +95,13 @@ greetBtn.onclick = () => {
   if (greetInput.value)
     greetMsg.textContent = `Hello, ${greetInput.value}! 👋`;
 };
+// ENTER KEY – GREETING
+greetInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    greetBtn.click();
+  }
+});
+
+
 
