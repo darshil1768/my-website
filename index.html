@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IT Professional Website</title>
+  <title>IT Professional Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,15 +11,28 @@
 <!-- LOGIN PAGE -->
 <section id="loginSection">
   <div class="card">
-    <h1>Welcome</h1>
+
+    <h1>Login Portal</h1>
+
+    <!-- ADMIN LOGIN -->
+    <h3>Admin Login</h3>
+    <input id="adminUser" placeholder="Admin Username">
+    <input id="adminPass" type="password" placeholder="Admin Password">
+    <button id="adminLoginBtn">Admin Login</button>
+    <p id="adminMsg"></p>
+
+    <hr>
+
+    <!-- USER LOGIN -->
+    <h3>User Login</h3>
     <p class="login-subtext">Enter your details to access the portfolio</p>
 
     <input id="loginName" placeholder="Name">
     <input id="loginAge" type="number" placeholder="Age">
     <input id="loginDob" type="date">
-
-    <button id="loginBtn">Login</button>
+    <button id="userLoginBtn">User Login</button>
     <p id="loginMsg"></p>
+
   </div>
 </section>
 
@@ -53,7 +66,7 @@
     </div>
 
     <h2>👋 Greeting</h2>
-    <input id="greetInput" placeholder="Enter your Beautiful name">
+    <input id="greetInput" placeholder="Enter your name">
     <button id="greetBtn">Greet Me</button>
     <p id="greetMsg"></p>
 
@@ -63,5 +76,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
