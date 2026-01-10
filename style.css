@@ -18,6 +18,13 @@ section {
   justify-content: center;
 }
 
+#adminBadge {
+  color: #7c3aed;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
 .card {
   background: white;
   padding: 40px;
@@ -82,3 +89,4 @@ hr {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
