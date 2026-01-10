@@ -10,6 +10,28 @@ const options = document.querySelectorAll(".option");
 const questionEl = document.getElementById("question");
 const nextBtn = document.getElementById("nextBtn");
 const progress = document.getElementById("progress");
+// ENTER KEY NAVIGATION – LOGIN FORM
+loginName.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    loginAge.focus();
+  }
+});
+
+loginAge.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    loginDob.focus();
+  }
+});
+
+loginDob.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    loginBtn.click();
+  }
+});
+
 
 // LOGIN
 loginBtn.onclick = () => {
@@ -73,3 +95,4 @@ greetBtn.onclick = () => {
   if (greetInput.value)
     greetMsg.textContent = `Hello, ${greetInput.value}! 👋`;
 };
+
