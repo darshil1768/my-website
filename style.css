@@ -36,6 +36,15 @@ body {
   margin-bottom: 10px;
   color: #ffffff;
 }
+.login-subtext {
+  color: #000000;        /* Black text */
+  font-weight: 700;     /* Bold */
+  margin-bottom: 25px;
+  opacity: 0;
+  animation: smoothFadeUp 1.2s ease forwards;
+  animation-delay: 0.4s;
+}
+
 
 .login-container p {
   color: #000000;   /* BLACK COLOR */
@@ -174,4 +183,5 @@ footer {
     max-width: 90%;
   }
 }
+
 
