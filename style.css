@@ -38,9 +38,10 @@ body {
 }
 
 .login-container p {
-  color: #e0e0e0;
+  color: #000000;   /* BLACK COLOR */
   margin-bottom: 25px;
 }
+
 
 .login-container input {
   width: 80%;
@@ -173,3 +174,4 @@ footer {
     max-width: 90%;
   }
 }
+
