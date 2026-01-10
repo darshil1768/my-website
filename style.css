@@ -21,7 +21,7 @@ section {
 .card {
   background: white;
   padding: 40px;
-  width: 400px;
+  width: 420px;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
@@ -36,7 +36,7 @@ section {
 input {
   width: 100%;
   padding: 12px;
-  margin: 10px 0;
+  margin: 8px 0;
   border-radius: 10px;
   border: 1px solid #ccc;
 }
@@ -44,7 +44,7 @@ input {
 button {
   width: 100%;
   padding: 12px;
-  margin-top: 10px;
+  margin-top: 8px;
   border-radius: 12px;
   border: none;
   background: #4f46e5;
@@ -72,6 +72,10 @@ button {
 .projects img {
   width: 100%;
   border-radius: 10px;
+}
+
+hr {
+  margin: 20px 0;
 }
 
 @keyframes fadeUp {
